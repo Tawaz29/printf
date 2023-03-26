@@ -8,9 +8,9 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, len = 0, ibuf = 0;
+	unsigned int i = 0, len = 0, ibuf = 0;
 	va_list arguments;
-	int (*function)(va_list, char *, int);
+	int (*function)(va_list, char *, unsigned int);
 	char *buffer;
 
 	va_start(arguments, format), buffer = malloc(sizeof(char) * 1024);
